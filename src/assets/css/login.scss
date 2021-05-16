@@ -1,0 +1,71 @@
+@import "var";
+.login {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("~@/assets/image/logo_background.png"); 
+  background-size: cover;
+  .login-form {
+    background-color: #fff;
+    padding: 30px 24px 60px;
+    .el-form-item {
+      margin-bottom: 30px;
+    }
+    .small-logo {
+      text-align: center;
+    }
+    .title-text {
+      padding: 12px 57px 30px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #192A4F;
+      line-height: 28px;
+    }
+    ::v-deep {
+      .el-input__inner {
+        border-width: 0 0 1px 0;
+        border-radius: 0;
+        padding: 0 8px;
+        font-size: 16px;
+      }
+      .el-checkbox__label {
+        color: #403F3E;
+      }
+      .login-btn span {
+        letter-spacing: 4px;
+        font-size: 18px;
+      }
+      .el-checkbox__input.is-checked .el-checkbox__inner,
+      .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+        background-color: $--login-hover-color;
+        border-color: $--login-hover-color;
+      }
+      .el-checkbox__input.is-checked + .el-checkbox__label {
+        color:#606266;
+      }
+      .el-checkbox__inner:hover {
+        border-color: $--login-color;
+      }
+      .el-checkbox__input.is-focus .el-checkbox__inner {
+        border-color:$--login-hover-color;
+      }
+    }
+    .handle-module {
+      margin: 40px 0 60px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .forget-register {
+      font-size: 14px;
+      color: #908F8B;
+      span:nth-child(2) {
+        margin: 0 12px;
+      }
+    }
+    .login-btn {
+      width: 100%;
+    }
+
+  }
+}

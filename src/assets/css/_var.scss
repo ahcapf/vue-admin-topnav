@@ -1,0 +1,31 @@
+$--base-font-size: 14px;
+
+$--login-color:#f3d19e;
+$--login-hover-color:#caa081;
+
+$--rootmenu-bg: #192A4F;
+$--rootmenu-hover: #192A4F;
+$--rootmenu-text: #EFF2F6;
+$--rootmenu-activeText:#EFF2F6;
+
+$--sidemenu-bg: #F9F9FD;
+$--sidemenu-hover: #F9F9FD;
+$--sidemenu-text:  #403F3E;
+$--sidemenu-activeText:#192A4F;
+
+
+$--side-subMenu-text: #61605E;
+$--side-subMenu-activeText: #403F3E;;
+
+$sideBarWidth: 260px;
+
+
+:export {
+  rootMenu-bg: $--rootmenu-bg;
+  rootmenu-text: $--rootmenu-text;
+  rootmenu-activeText: $--rootmenu-activeText;
+
+  sideMenu-bg: $--sidemenu-bg;
+  sidemenu-text: $--sidemenu-text;
+  sidemenu-activeText: $--sidemenu-activeText;
+}

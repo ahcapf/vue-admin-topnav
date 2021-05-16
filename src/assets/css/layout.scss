@@ -1,0 +1,104 @@
+@import 'var';
+
+.layout-container {
+  height: 100%;
+  .el-header {
+    padding: 0;
+  }
+}
+
+.layout-header {
+  height: 60px;
+  background: #192A4F;
+  box-shadow: 0px 1px 21px 0px rgba(162, 162, 162, 0.08), 0px 0px 10px 0px rgba(209, 209, 209, 0.16);
+  display: flex;
+  .logo {
+    padding-left: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .header-nav {
+    padding-left: 115px;
+    padding-bottom: 8px;
+    display: flex;
+    align-self: flex-end
+  }
+  .el-menu--horizontal {
+    border: none!important;
+  }
+  .el-menu--horizontal>.el-menu-item {
+    padding: 0 5px;
+    margin-right: 50px; 
+    height: 40px;
+    line-height: 40px;
+  }
+  .el-menu--horizontal .el-menu-item:not(.is-disabled):focus, .el-menu--horizontal .el-menu-item:not(.is-disabled):hover {
+    background-color: $--rootmenu-hover!important;
+  }
+}
+
+.sidebar-container {
+  width: $sideBarWidth !important;
+  background: #F9F9FD;
+  border-right: 1px solid #E3E3EB;
+  box-shadow: 1px 0px 10px 0px rgba(209, 209, 209, 0.16);
+  padding-top: 20px;
+  .el-scrollbar {
+    height: 100%;
+  }
+  .scrollbar-wrapper {
+    overflow-x: hidden !important;
+  }
+  .el-scrollbar__bar.is-vertical {
+    right: 0px;
+  }
+  .el-menu {
+    border: none;
+  }
+  .el-menu-item, .el-submenu__title {
+    height: 40px!important;
+    line-height: 40px!important;
+  }
+
+  .el-menu-item{
+    &:hover {
+      background-color: $--sidemenu-hover!important;
+    }
+    &.is-active { 
+      background-color: #ECECF3!important; 
+      &.submenu-title-noDropdown { // 只有一级菜单选中文字加粗
+        font-weight: 600;
+      }
+      &:hover {
+        background-color: #ECECF3!important; 
+      }
+    }
+    
+  }
+
+  .el-submenu {  // 选中二级子菜单
+    &.is-active>.el-submenu__title { 
+      color: $--side-subMenu-activeText !important;
+      font-weight: 600;
+    }
+    .el-submenu__title:hover {
+      background-color: $--sidemenu-hover!important;
+    }
+    &>.el-submenu__title .el-submenu__icon-arrow {
+      transform: rotate(-90deg);
+    }
+    &.is-opened>.el-submenu__title .el-submenu__icon-arrow {
+      transform: rotate(0);
+    }
+  }
+ 
+}
+
+.app-main {
+  flex: 1;
+  flex-basis: auto;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 20px;
+}
